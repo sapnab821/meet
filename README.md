@@ -1,0 +1,62 @@
+This meet app was created by CRA
+
+The TDD technique is used so the meet app can work offline
+User will be able to use the app when they want to view events that are upcoming for a specific city
+The server is a serverless function hosted by a cloud provider (e.g.,
+AWS). The application itself is also hosted online to make it shareable and installable. It can
+be used even when the user is offline. As it’s responsive, it displays well on any device.
+Serverless is the next generation of cloud infrastructure, PWA provides great user
+experience and performance, and the TDD technique ensures you have quality code and
+adequate test coverage. All of these skills, together with data visualization, will distinguish
+you from other web developers.
+
+
+Scenario 2
+As a user, 
+I should be able to show event details from default or hide event details after revealing them
+So that I can see details of event or hide the details of an event 
+
+Scenario 3
+As a user,
+I should be able to change the number of events shown from 32 default 
+So that I can see the number of events at a time that is convenient/desirable to me.
+
+Scenario 4
+    As a user,
+I should be able to user the app without internet connection if the settings stay the same.
+So that I have access to event list even if internet is not working at the moment. 
+
+Scenario 5
+    As a user,
+    I should be able to install the meet app as a shortcut on my device
+    So that I have more convenient access to the app.
+
+Scenario 6
+    As a user,
+     I should be able to see a chart with the number of available events in each city
+    So I know of the number of events in each city. 
+
+Gherkin Style
+Scenario 2
+    Given the event is set to default
+When the user has expanded an event
+Then the user should be able to see event details
+
+Scenario 3
+    Given the default number of events of 32 is shown
+    When the user changes the number of events shown
+    Then the number events shown should change to the number set by user
+
+Scenario 4
+    Given the app settings are not changed by the user
+    When the internet connection is turned off
+    Then the user should still be able to see the event list
+Scenario 5
+    Given the user is using a personal device
+    When the user installs the meet app on their device
+    Then the user should be able to use the app on their device
+
+Scenario 6
+    Given the user is logged onto the meet app
+    When the user click on the chart of events in a city
+    Then the user should be able to see the number of events in that city
