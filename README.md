@@ -10,6 +10,8 @@ experience and performance, and the TDD technique ensures you have quality code 
 adequate test coverage. All of these skills, together with data visualization, will distinguish
 you from other web developers.
 
+The Meet app will use AWS Lambda, which is serverless (Faas), for authorization. For the API the consumer key, the consumer secret and an access token are needed for authorization. The User will use the key and secret, which is essentially a username and password to grant access for the serverless function hosted on AWS Lambda to provide the access token. When the user grants access to Google calendar, the serverless function displays the events. The authorization sends back an access token which is used when the user is logged into the app. 
+
 
 Scenario 2
 As a user, 
