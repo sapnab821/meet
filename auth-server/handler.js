@@ -94,17 +94,7 @@ module.exports.getCalendarEvents = async (event) => {
         }
       }
     );
-    /**
-     *  Exchange authorization code for access token with a “callback” after the exchange,
-     *  The callback in this case is an arrow function with the results as parameters: “error” and “response”
-     */
-
-    oAuth2Client.getToken(access_token, (error, response) => {
-      if (error) {
-        return reject(error);
-      }
-      return resolve(response);
-    });
+    
   })
     .then((results) => {
       // Respond with OAuth token 
