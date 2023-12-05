@@ -81,10 +81,10 @@ export const getAccessToken = async () => {
 
 
 export const getEvents = async () => {
-  //if (window.location.href.startsWith('http://localhost')) {
+  if (window.location.href.startsWith('http://localhost')) {
     return mockData;
   }
-
+}
   
   const token = await getAccessToken();
 
