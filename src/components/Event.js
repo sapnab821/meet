@@ -5,11 +5,7 @@ import { useState } from "react";
 
 const Event = ({event}) => {
    
-
-
     const [isOpen, setIsOpen] = useState(false)
-
-
     
       return (
         <li className="event">
