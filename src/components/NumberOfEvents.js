@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const NumberOfEvents = ({ }) => {
+const NumberOfEvents = ({}) => {
 
   const [number, setNumber] = useState(32);
 
@@ -24,5 +24,3 @@ const NumberOfEvents = ({ }) => {
     </div>
   );
 }
-
-export default NumberOfEvents;

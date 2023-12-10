@@ -1,5 +1,5 @@
 // src/components/CitySearch.js
-
+import React from "react";
 import { useState, useEffect } from "react";
 
 const CitySearch = ({ allLocations, setCurrentCity }) => {

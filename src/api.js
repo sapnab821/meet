@@ -11,6 +11,7 @@ import mockData from './mock-data';
  * It will also remove all duplicates by creating another new array using the spread operator and spreading a Set.
  * The Set will remove all duplicates from the array.
  */
+ 
 
 export const extractLocations = (events) => {
   const extractedLocations = events.map((event) => event.location);
@@ -84,7 +85,7 @@ export const getEvents = async () => {
   if (window.location.href.startsWith('http://localhost')) {
     return mockData;
   }
-}
+
   
   const token = await getAccessToken();
 
@@ -99,3 +100,4 @@ export const getEvents = async () => {
       return result.events;
     } else return null; 
   };
+}

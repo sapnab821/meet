@@ -1,11 +1,14 @@
+import React from 'react';
 import { render } from '@testing-library/react';
+import { createRoot } from 'react-dom/client';
 import userEvent from '@testing-library/user-event';
 import NumberOfEvents from '../components/NumberOfEvents';
 
 describe('<NumberOfEvents /> component', () => {
   let NumberOfEventsComponent;
   beforeEach(() => {
-    NumberOfEventsComponent = render(<NumberOfEvents />);
+    NumberOfEventsComponent = render(<NumberOfEvents />)
+    
   });
 
   test('renders number of events text input', () => {
