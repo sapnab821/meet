@@ -1,4 +1,5 @@
-import {render } from "@testing-library/react";
+import React from 'react';
+import {render, waitFor, act } from "@testing-library/react";
 import "../mock-data";
 import Event from "../components/Event";
 import { getEvents } from "../api";
@@ -49,7 +50,8 @@ describe("<Event/> component", () => {
     const descriptionSection =
       EventComponent.container.querySelector(".detailsShown");
     expect(descriptionSection).toBeVisible();
-  });
+  
+})
   test("hides the details section when the user clicks on the hide details button", async () => {
     const user = userEvent.setup();
     const hideDetailsButton = EventComponent.queryByText("hide details");

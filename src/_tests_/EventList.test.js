@@ -1,10 +1,10 @@
 // src/__tests__/EventList.test.js
-
-import { render, within, waitFor } from '@testing-library/react';
-
+import React from 'react';
+import { render, within, waitFor  } from '@testing-library/react';
 import { getEvents } from '../api';
 import EventList from '../components/EventList';
 import App from '../App';
+
 
 
 describe('<EventList /> component', () => {
@@ -34,6 +34,5 @@ describe('<EventList /> integration', () => {
     });
   });
 }); 
-
 
 });

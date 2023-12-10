@@ -1,5 +1,5 @@
 // src/components/NumberOfEvents.js
-
+import React from 'react';
 import { useState } from "react";
 
 const NumberOfEvents = ({}) => {
@@ -24,3 +24,5 @@ const NumberOfEvents = ({}) => {
     </div>
   );
 }
+
+export default NumberOfEvents;
