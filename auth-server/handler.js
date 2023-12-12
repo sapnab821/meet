@@ -5,7 +5,7 @@ const calendar = google.calendar("v3");
 const SCOPES = ["https://www.googleapis.com/auth/calendar.events.public.readonly"];
 const { CLIENT_SECRET, CLIENT_ID, CALENDAR_ID } = process.env;
 const redirect_uris = [
-  "https://sapnab821.github.io/meet/"
+  "https://sapnab821.github.io/meet"
 ];
 
 const oAuth2Client = new google.auth.OAuth2(
@@ -44,8 +44,8 @@ module.exports.getAccessToken = async (event) => {
     /**
      *  Exchange authorization code for access token with a “callback” after the exchange,
      *  The callback in this case is an arrow function with the results as parameters: “error” and “response”
-     */
-
+     
+*/
     oAuth2Client.getToken(code, (error, response) => {
       if (error) {
         return reject(error);
