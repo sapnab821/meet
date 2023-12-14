@@ -42,16 +42,7 @@ const removeQuery = () => {
   }
 };
 
-const getToken = async (code) => {
-  const encodeCode = encodeURIComponent(code);
-  const response = await fetch(
-    "https://owtv818248.execute-api.us-east-2.amazonaws.com/dev/api/token/" + encodeCode
-  );
-  const { access_token } = await response.json();
-  access_token && localStorage.setItem("access_token", access_token);
 
-  return access_token;
-};
 
 export const getAccessToken = async () => {
   const accessToken = localStorage.getItem('access_token');
@@ -98,3 +89,14 @@ export const getEvents = async () => {
     } else return null; 
   };
 }
+
+const getToken = async (code) => {
+  const encodeCode = encodeURIComponent(code);
+  const response = await fetch(
+    "https://owtv818248.execute-api.us-east-2.amazonaws.com/dev/api/token/" + encodeCode
+  );
+  const { access_token } = await response.json();
+  access_token && localStorage.setItem("access_token", access_token);
+
+  return access_token;
+};
