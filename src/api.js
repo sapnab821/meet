@@ -1,6 +1,6 @@
 // src/api.js
 
-import mockData from './mock-data';
+import mockData from './mock-data.js';
 
 
 /**
@@ -90,7 +90,8 @@ export const getEvents = async () => {
   };
 }
 
-/*const getToken = async (code) => {
+
+const getToken = async (code) => {
   const encodeCode = encodeURIComponent(code);
   const response = await fetch(
     "https://owtv818248.execute-api.us-east-2.amazonaws.com/dev/api/token/" + encodeCode
@@ -99,8 +100,9 @@ export const getEvents = async () => {
   access_token && localStorage.setItem("access_token", access_token);
 
   return access_token;
-};*/
+};
 
+/*
 const getToken = async (code) => {
   try {
     const encodeCode = encodeURIComponent(code);
@@ -116,3 +118,4 @@ const getToken = async (code) => {
     error.json();
   }
  }
+*/
