@@ -172,7 +172,7 @@ const getToken = async (code) => {
 };
 
 export const getTestEvents = async () => {
-  return testEventData;
+  return mockData;
 }
 
 /*
