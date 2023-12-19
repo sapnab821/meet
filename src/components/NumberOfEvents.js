@@ -15,10 +15,10 @@ const NumberOfEvents = ({setCurrentNOE}) => {
      <div id="number-of-events">
     <input
       type="text"
-      className='numOfEvents'
+      name="numOfEvents"
       defaultValue="32"
       onChange={handleInputChanged}
-      data-testid="numberOfEventsInput"
+      id="numberOfEventsInput"
     />
   </div>
 );
