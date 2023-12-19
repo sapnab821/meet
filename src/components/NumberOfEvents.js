@@ -18,7 +18,7 @@ const NumberOfEvents = ({setCurrentNOE}) => {
     
     id="number-of-events-input"
     className="number-of-events-input"
-    defaultValue={32}
+    defaultValue="32"
 
       
       onChange={handleInputChanged}
