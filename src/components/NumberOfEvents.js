@@ -15,7 +15,7 @@ const NumberOfEvents = ({setCurrentNOE}) => {
      <div id="number-of-events">
     <input
     type="text"
-    placeholder="Enter a number"
+    
     id="number-of-events-input"
     className="number-of-events-input"
     defaultValue={32}
