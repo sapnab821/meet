@@ -5,7 +5,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import { extractLocations, getEvents} from './api';
 import NumberOfEvents from './components/NumberOfEvents';
-import Logo from './Untitled.jpeg'
+import Logo from './conversation.png'
 
 const App = () => {
   const [events, setEvents] = useState([]);
@@ -33,7 +33,10 @@ const App = () => {
 
  return (
   <div className="App">
-    <div class="logo"><img src={Logo} alt="hands" width="350" height="auto"/></div>
+    <h1>Meet App</h1>
+    <div class="logo"><img src={Logo} alt="hands" width="200" height="auto"/></div>
+    <div></div>
+    <div></div>
   <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
   <NumberOfEvents setCurrentNOE={setCurrentNOE} />
   <EventList events={events} />
