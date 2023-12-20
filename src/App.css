@@ -111,7 +111,7 @@ input[type="number"] {
 }
 
 .suggestions > li:hover {
-  background-color: #a2f4ad;
+  background-color: rgb(157, 123, 242)
 }
 
 .event {
