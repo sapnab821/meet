@@ -8,7 +8,7 @@ const Event = ({event}) => {
     const [isOpen, setIsOpen] = useState(false)
     
       return (
-        <li className="event">
+        <li id="listitem" className="event">
           <div className="event-title">{event.summary}</div>
           <div className="event-infos">
             <div>{event.created}</div>

@@ -25,7 +25,7 @@ So that I can see the number of events at a time that is convenient/desirable to
 
 Feature 4
     As a user,
-I should be able to user the app without internet connection if the settings stay the same.
+I should be able to use the app without internet connection if the settings stay the same.
 So that I have access to event list even if internet is not working at the moment. 
 
 Feature 5
