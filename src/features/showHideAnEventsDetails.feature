@@ -10,4 +10,4 @@ Feature: Show and hide events details
  Scenario: User can collapse an event to hide its details
   Given the user sees the details of an event
   When the user presses the hide details button
-  Then the details of that even will be hidden
+  Then the details of that event will be hidden

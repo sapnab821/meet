@@ -34,9 +34,8 @@ const App = () => {
  return (
   <div className="App">
     <h1>Meet App</h1>
-    <div class="logo"><img src={Logo} alt="hands" width="400" height="auto"/></div>
-    <div></div>
-    <div></div>
+    <div class="logo"><img src={Logo} alt="calendar" width="400" height="auto"/></div>
+    
   <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
   <NumberOfEvents setCurrentNOE={setCurrentNOE} />
   <EventList events={events} />
