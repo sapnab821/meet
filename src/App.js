@@ -8,6 +8,7 @@ import NumberOfEvents from './components/NumberOfEvents';
 import Logo from './event.png'
 import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
 
+
 const App = () => {
   const [events, setEvents] = useState([]);
   const [currentNOE, setCurrentNOE] = useState(32);
@@ -17,17 +18,7 @@ const App = () => {
   const [errorAlert, setErrorAlert] = useState("");
   const [warningAlert, setWarningAlert] = useState("");
   
-  useEffect(() => {
-    if (navigator.onLine) {
-      setWarningAlert("");
-    } else {
-      setWarningAlert("You are currently offline");
-    }
-    fetchData();
-  }, [currentCity, currentNOE]);
-
   
-
   const fetchData = async () => {
     const allEvents = await getEvents();
     const filteredEvents = currentCity === "See all cities" ?
@@ -37,6 +28,14 @@ const App = () => {
     setAllLocations(extractLocations(allEvents));
   };
 
+  useEffect(() => {
+    if (navigator.onLine) {
+      setWarningAlert("");
+    } else {
+      setWarningAlert("You are currently offline");
+    }
+    fetchData();
+  }, [currentCity, currentNOE]);
 
   
 
