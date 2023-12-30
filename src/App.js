@@ -21,7 +21,7 @@ const App = () => {
     
     let warningText;
     if (navigator.onLine) {
-      
+      warningText = "";
     } else {
       warningText = "You are currently offline";
     }
@@ -56,7 +56,7 @@ const App = () => {
         {errorAlert ? <ErrorAlert text={errorAlert}/> : null}
       </div>
       <div className="warning-container">
-        {warningAlert ? <WarningAlert text={warningAlert}/> : null}
+        {warningAlert.length ? <WarningAlert text={warningAlert}/> : null}
       </div>
   <CitySearch allLocations={allLocations} 
               setCurrentCity={setCurrentCity} 
