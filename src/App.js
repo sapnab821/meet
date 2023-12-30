@@ -18,17 +18,18 @@ const App = () => {
   const [warningAlert, setWarningAlert] = useState("");
   
   useEffect(() => {
-    fetchData();
+    
     let warningText;
     if (navigator.onLine) {
-      warningText = "";
+      
     } else {
       warningText = "You are currently offline";
     }
-
     setWarningAlert(warningText);
-
+    fetchData();
   }, [currentCity, currentNOE]);
+
+  
 
   const fetchData = async () => {
     const allEvents = await getEvents();
