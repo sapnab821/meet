@@ -18,7 +18,6 @@ const App = () => {
   const [warningAlert, setWarningAlert] = useState("");
   
   useEffect(() => {
-
     if (navigator.onLine) {
       setWarningAlert("");
     } else {
@@ -50,10 +49,10 @@ const App = () => {
     <div className="alerts-container">
         {infoAlert.length ? <InfoAlert text={infoAlert}/> : null}
       </div>
-      <div className="error-container">
+      <div className="alerts-container">
         {errorAlert.length ? <ErrorAlert text={errorAlert}/> : null}
       </div>
-      <div className="warning-container">
+      <div className="alerts-container">
         {warningAlert.length ? <WarningAlert text={warningAlert}/> : null}
       </div>
   <CitySearch allLocations={allLocations} 
