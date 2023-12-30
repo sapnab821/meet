@@ -18,14 +18,12 @@ const App = () => {
   const [warningAlert, setWarningAlert] = useState("");
   
   useEffect(() => {
-    
-    let warningText;
+
     if (navigator.onLine) {
-      warningText = "";
+      setWarningAlert("");
     } else {
-      warningText = "You are currently offline";
+      setWarningAlert("You are currently offline");
     }
-    setWarningAlert(warningText);
     fetchData();
   }, [currentCity, currentNOE]);
 
@@ -53,7 +51,7 @@ const App = () => {
         {infoAlert.length ? <InfoAlert text={infoAlert}/> : null}
       </div>
       <div className="error-container">
-        {errorAlert ? <ErrorAlert text={errorAlert}/> : null}
+        {errorAlert.length ? <ErrorAlert text={errorAlert}/> : null}
       </div>
       <div className="warning-container">
         {warningAlert.length ? <WarningAlert text={warningAlert}/> : null}
