@@ -30,8 +30,6 @@ const App = () => {
 
   const fetchData = async () => {
     const allEvents = await getEvents();
-
-    
     const filteredEvents = currentCity === "See all cities" ?
       allEvents :
       allEvents.filter(event => event.location === currentCity)
@@ -48,11 +46,7 @@ const App = () => {
     <div class="logo"><img src={Logo} alt="calendar" width="400" height="auto"/></div>
     <div className="alerts-container">
         {infoAlert.length ? <InfoAlert text={infoAlert}/> : null}
-      </div>
-      <div className="alerts-container">
         {errorAlert.length ? <ErrorAlert text={errorAlert}/> : null}
-      </div>
-      <div className="alerts-container">
         {warningAlert.length ? <WarningAlert text={warningAlert}/> : null}
       </div>
   <CitySearch allLocations={allLocations} 
