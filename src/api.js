@@ -83,8 +83,10 @@ export const getAccessToken = async () => {
 
 
 export const getEvents = async () => {
+  NProgress.start();
+
   if (window.location.href.startsWith('http://localhost')) {
-    NProgress.start();
+    NProgress.done();
     return mockData;}
 
     if(!navigator.onLine){
