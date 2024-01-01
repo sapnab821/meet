@@ -26,8 +26,8 @@ const App = () => {
       allEvents.filter(event => event.location === currentCity)
     setEvents(filteredEvents.slice(0, currentNOE));
     setAllLocations(extractLocations(allEvents));
-  };
-
+  
+  }
   useEffect(() => {
     if (navigator.onLine) {
       setWarningAlert("");
@@ -37,7 +37,7 @@ const App = () => {
     fetchData();
   }, [currentCity, currentNOE]);
 
-  
+
 
  return (
   <div className="App">
