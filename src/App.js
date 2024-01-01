@@ -7,6 +7,7 @@ import { extractLocations, getEvents} from './api';
 import NumberOfEvents from './components/NumberOfEvents';
 import Logo from './event.png'
 import { InfoAlert, ErrorAlert, WarningAlert } from './components/Alert';
+import "./nprogress.css";
 
 
 const App = () => {
