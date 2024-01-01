@@ -18,7 +18,7 @@ const App = () => {
   const [errorAlert, setErrorAlert] = useState("");
   const [warningAlert, setWarningAlert] = useState("");
   
-  
+  useEffect(() => {
   const fetchData = async () => {
     const allEvents = await getEvents();
     const filteredEvents = currentCity === "See all cities" ?
@@ -28,7 +28,7 @@ const App = () => {
     setAllLocations(extractLocations(allEvents));
   
   }
-  useEffect(() => {
+  
     if (navigator.onLine) {
       setWarningAlert("");
     } else {
