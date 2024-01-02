@@ -1,6 +1,7 @@
 import React from 'react';
 import CitySearch from './components/CitySearch';
 import EventList from './components/EventList';
+import CityEventsChart from './components/CityEventsChart';
 import './App.css';
 import { useState, useEffect } from 'react';
 import { extractLocations, getEvents} from './api';
@@ -54,6 +55,7 @@ const App = () => {
               setInfoAlert={setInfoAlert}/>
   <NumberOfEvents setCurrentNOE={setCurrentNOE} 
                   setErrorAlert={setErrorAlert}/>
+  <CityEventsChart allLocations={allLocations} events={events} />
   <EventList events={events} />
 </div>
 
