@@ -30,10 +30,10 @@ const App = () => {
   
   }
   useEffect(() => {
-    if (navigator.onLine) {
-      setWarningAlert("");
-    } else {
+    if (!navigator.onLine) {
       setWarningAlert("You are currently offline");
+    } else if (navigator.onLine){
+      setWarningAlert("");
     }
     fetchData();
   }, [currentCity, currentNOE]);
