@@ -4,6 +4,7 @@ import mockData from './mock-data';
 import NProgress from 'nprogress';
 
 
+
 /**
  *
   @param {*} events:
@@ -46,7 +47,7 @@ const removeQuery = () => {
 const getToken = async (code) => {
   const encodeCode = encodeURIComponent(code);
   const response = await fetch(
-    'https://owtv818248.execute-api.us-east-2.amazonaws.com/dev/api/token' + '/' + encodeCode
+    `https://owtv818248.execute-api.us-east-2.amazonaws.com/dev/api/token/${encodeCode}`
   );
   const { access_token } = await response.json();
   access_token && localStorage.setItem("access_token", access_token);
@@ -65,7 +66,7 @@ export const getAccessToken = async () => {
     const code = await searchParams.get("code");
     if (!code) {
       const response = await fetch(
-        "https://owtv818248.execute-api.us-east-2.amazonaws.com/dev/api/get-auth-url"
+      `https://owtv818248.execute-api.us-east-2.amazonaws.com/dev/api/get-auth-url`
       );
       const result = await response.json();
       const { authUrl } = result;
