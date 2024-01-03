@@ -2,6 +2,7 @@ import React from 'react';
 import CitySearch from './components/CitySearch';
 import EventList from './components/EventList';
 import CityEventsChart from './components/CityEventsChart';
+import EventGenreChart from './components/EventGenresChart';
 import './App.css';
 import { useState, useEffect } from 'react';
 import { extractLocations, getEvents} from './api';
@@ -42,6 +43,7 @@ const App = () => {
 
 
  return (
+  
   <div className="App">
     <h1>Meet App</h1>
     <div class="logo"><img src={Logo} alt="calendar" width="400" height="auto"/></div>
@@ -55,9 +57,14 @@ const App = () => {
               setInfoAlert={setInfoAlert}/>
   <NumberOfEvents setCurrentNOE={setCurrentNOE} 
                   setErrorAlert={setErrorAlert}/>
+  <div className="charts-container">
   <CityEventsChart allLocations={allLocations} events={events} />
+  <EventGenreChart events = {events}/>
+  </div>
+  
   <EventList events={events} />
-</div>
+  </div>
+
 
  );
 }

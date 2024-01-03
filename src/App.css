@@ -140,3 +140,8 @@ input[type="number"] {
   width: 250px;
   z-index: 1000;
 }
+
+.charts-container {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+}
