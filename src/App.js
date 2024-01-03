@@ -43,7 +43,7 @@ const App = () => {
 
 
  return (
-  
+  <div>
   <div className="App">
     <h1>Meet App</h1>
     <div class="logo"><img src={Logo} alt="calendar" width="400" height="auto"/></div>
@@ -51,7 +51,7 @@ const App = () => {
         {infoAlert.length ? <InfoAlert text={infoAlert}/> : null}
         {errorAlert.length ? <ErrorAlert text={errorAlert}/> : null}
         {warningAlert.length ? <WarningAlert text={warningAlert}/> : null}
-      </div>
+  </div>
   <CitySearch allLocations={allLocations} 
               setCurrentCity={setCurrentCity} 
               setInfoAlert={setInfoAlert}/>
@@ -64,7 +64,7 @@ const App = () => {
   
   <EventList events={events} />
   </div>
-
+</div>
 
  );
 }
