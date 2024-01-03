@@ -146,3 +146,10 @@ input[type="number"] {
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
 }
+
+@media (max-width: 768px) {
+  .charts-container {
+  display: flex;
+    flex-direction: column; 
+    grid-template-columns: none;
+}}
