@@ -27,7 +27,7 @@ const EventGenresChart = ({events}) => {
                 dominantBaseline="central"
                
             >
-                {`${genres[index]} ${(percent * 100).toFixed(0)}%`}
+                {`${(percent * 100).toFixed(0)}%`}
             </text>
         ) : null;
     };
