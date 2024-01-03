@@ -44,6 +44,7 @@ const EventGenresChart = ({events}) => {
     };
 
     return (
+        <div class="charts-container">
         <ResponsiveContainer width="99%" height={400}>
             <PieChart>
                 <Pie
@@ -61,6 +62,7 @@ const EventGenresChart = ({events}) => {
                 <Legend verticalAlign="top" height={36} />
             </PieChart>
         </ResponsiveContainer>
+        </div>
     );
 }
 export default EventGenresChart;
