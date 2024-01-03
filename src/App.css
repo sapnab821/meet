@@ -142,6 +142,7 @@ input[type="number"] {
 }
 
 .charts-container {
+  justify-content: space-around;
   display: flex;
   grid-template-columns: 1fr 1fr;
 }
