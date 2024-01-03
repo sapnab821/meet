@@ -43,7 +43,7 @@ const App = () => {
 
 
  return (
-  <div>
+  
   <div className="App">
     <h1>Meet App</h1>
     <div class="logo"><img src={Logo} alt="calendar" width="400" height="auto"/></div>
@@ -58,13 +58,13 @@ const App = () => {
   <NumberOfEvents setCurrentNOE={setCurrentNOE} 
                   setErrorAlert={setErrorAlert}/>
   <div className="charts-container">
-  {<CityEventsChart allLocations={allLocations} events={events} />}
-  {<EventGenreChart events = {events}/>}
+  <CityEventsChart allLocations={allLocations} events={events} />
+  <EventGenreChart events = {events}/>
   </div>
   
   <EventList events={events} />
   </div>
-</div>
+
 
  );
 }
