@@ -13,24 +13,26 @@ import {
 const CityEventsChart = ({ allLocations, events }) => {
     const [data, setData] = useState([]);
 
-    useEffect(() => {
-        setData(getData());
-      }, [`${events}`]);
+    
 
     const getData = () => {
         const data = allLocations.map((location) => {
         const count = events.filter((event) => event.location === location).length
-        const city = location.split(/, | - /)[0];
+        const city = location.split(/, |-/)[0];
           return { city , count  };
         })
         return data;
       };
       
+
+      useEffect(() => {
+        setData(getData());
+      }, [`${events}`]);
    
 
       return (
         
-        <ResponsiveContainer width={600} height={500}>
+        <ResponsiveContainer width= {600} height={400}>
           <ScatterChart
             margin={{
               top: 20,
