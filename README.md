@@ -1,64 +1,64 @@
-This meet app was created by CRA
+# MEET APP
 
-The TDD technique is used so the meet app can work offline
-User will be able to use the app when they want to view events that are upcoming for a specific city
-The server is a serverless function hosted by a cloud provider (e.g.,
-AWS). The application itself is also hosted online to make it shareable and installable. It can
-be used even when the user is offline. As it’s responsive, it displays well on any device.
-Serverless is the next generation of cloud infrastructure, PWA provides great user
-experience and performance, and the TDD technique ensures you have quality code and
-adequate test coverage. All of these skills, together with data visualization, will distinguish
-you from other web developers.
+# PROJECT DESCRIPTION:
+This meet app combines serverless architecture with Progressive Web App (PWA) features, offering instant loading, offline support, and cross-platform compatibility. Following a Test-Driven Development (TDD) approach, priority is given to quality code and user-centric features. Additionally, this app includes data visualization with charts, enhancing user experience and insight into event data.
 
-The Meet app will use AWS Lambda, which is serverless (Faas), for authorization. For the API the consumer key, the consumer secret and an access token are needed for authorization. The User will use the key and secret, which is essentially a username and password to grant access for the serverless function hosted on AWS Lambda to provide the access token. When the user grants access to Google calendar, the serverless function displays the events. The authorization sends back an access token which is used when the user is logged into the app. 
+## Key Features:
+### ● Filter Events by City
+**User Story**: As a user, I want to filter events by city so that I can find events happening in my preferred location.
+
+**Scenario:**
+Given the user is on the event page, When the user selects a specific city from the filter dropdown,  Then only events in the selected city should be displayed.
+
+### ● Show/Hide Event Details. 
+**User Story**: As a user, I want to view event details, but also have the option to hide them to focus on the event list.
+
+**Scenario**:
+Given the user is viewing event details, When the user clicks on the "Hide Details" button, Then the event details should be hidden, and only the event list should be visible.
+
+### ● Specify Number of Events. 
+**User Story**: As a user, I want to specify the number of events displayed on the page to manage the amount of information shown.
+
+**Scenario**:
+Given the user is on the event page, When the user selects a specific number from the dropdown to specify the number of events, Then only the specified number of events should be displayed on the page.
 
 
-Feature 2
-As a user, 
-I should be able to show event details from default or hide event details after revealing them
-So that I can see details of event or hide the details of an event 
+### ● Use the App When Offline. 
+**User Story**: As a user, I want to be able to use the app even when I'm offline so that I can access event information regardless of my internet connection.
 
-Feature 3
-As a user,
-I should be able to change the number of events shown from 32 default 
-So that I can see the number of events at a time that is convenient/desirable to me.
+**Scenario**:
+Given the user has previously loaded event data, When the user loses internet connection, Then the app should continue to display previously loaded event data without requiring an internet connection.
 
-Feature 4
-    As a user,
-I should be able to use the app without internet connection if the settings stay the same.
-So that I have access to event list even if internet is not working at the moment. 
+### ● Add an App Shortcut to the Home Screen. 
+**User Story**: As a user, I want to easily access the app by adding a shortcut to my device's home screen for quick access.
 
-Feature 5
-    As a user,
-    I should be able to install the meet app as a shortcut on my device
-    So that I have more convenient access to the app.
+**Scenario**:
+Given the user is using a mobile device to access the app, When the user selects the "Add to Home Screen" option from the browser menu, Then the app should be added to the device's home screen for convenient access.
 
-Feature 6
-    As a user,
-     I should be able to see a chart with the number of available events in each city
-    So I know of the number of events in each city. 
+### ● Display Charts Visualizing Event Details.
+**User Story**: As a user, I want to visualize event details through charts to better understand event data and trends.
 
-Gherkin Style
-Feature 2
-    Given the event is set to default
-When the user has expanded an event
-Then the user should be able to see event details
+**Scenario**:
+Given the user is viewing event details, When the user selects the "Visualize Data" option, Then the app should display charts or graphs representing event data such as attendance, popularity, or location distribution.
 
-Feature 3
-    Given the default number of events of 32 is shown
-    When the user changes the number of events shown
-    Then the number events shown should change to the number set by user
+## USING SERVERLESS FUNCTIONS:
+In the Meet app, serverless functions will be employed for various critical functionalities, including event notifications, real-time data processing, user authentication, and event recommendations. These functions offer a lightweight and scalable solution for backend processes, ensuring efficient resource utilization and dynamic scaling based on user demand. With serverless technology, the Meet app can deliver personalized experiences while maintaining cost-effectiveness and seamless scalability.
 
-Feature 4
-    Given the app settings are not changed by the user
-    When the internet connection is turned off
-    Then the user should still be able to see the event list
-Feature 5
-    Given the user is using a personal device
-    When the user installs the meet app on their device
-    Then the user should be able to use the app on their device
+## Getting Started
+1. Clone the repository: `git clone https://github.com/sapnab821/meet.git`
+2. Install dependencies: npm install
+3. Start the application: npm start
 
-Feature 6
-    Given the user is logged onto the meet app
-    When the user click on the chart of events in a city
-    Then the user should be able to see the number of events in that city
+## Scripts
+- `npm start`: Start the development server.
+- `npm build`: Build the application for production.
+- `npm test`: Run tests using JEST.
+- `npm run eject`: Eject from Create React App configuration.
+- `npm run predeploy`: Build script for deployment.
+- `npm run deploy`: Deploy the application to GitHub Pages.
+- 
+## Deployment
+The app is deployed on Gh-pages : https://sapnab821.github.io/meet/
+
+## Author
+- Sapna Bolikal
